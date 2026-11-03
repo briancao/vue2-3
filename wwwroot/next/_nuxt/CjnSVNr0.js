@@ -1,0 +1,1 @@
+import{u as s,f as u,h as r,i as o,g as i}from"./SYFkrtu-.js";function h(e){var t;const n=e||u();return((t=n.ssrContext)==null?void 0:t.head)||n.runWithContext(()=>{if(r()){const a=o(i);if(!a)throw new Error("[nuxt] [unhead] Missing Unhead instance.");return a}})}function d(e,n={}){const t=h(n.nuxt);return s(e,{head:t,...n})}export{d as u};

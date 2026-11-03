@@ -1,0 +1,15 @@
+{
+  "name": "vue2-3",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix vue2-app install --legacy-peer-deps && npm --prefix nuxt-app install",
+    "clean": "node -e \"require('fs').rmSync('wwwroot',{recursive:true,force:true})\"",
+    "build": "npm run clean && npm --prefix vue2-app run build && npm --prefix nuxt-app run generate",
+    "build:dev": "npm run clean && npm --prefix vue2-app run build:dev && npm --prefix nuxt-app run generate",
+    "dev": "npm run clean && concurrently -n vue2,nuxt,web -c green,cyan,magenta \"npm --prefix vue2-app run dev\" \"npm --prefix nuxt-app run watch\" \"node server.js\"",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
